@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="./output.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,27 +20,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script type="module" src="../src/components/MyFooter.js"></script>
+    <script type="module" src="../src/components/MyNavbar.js"></script>
+
   </head>
+
+
   <body class="bg-wd-black">
-    <nav class="bg-wd-darkgrey text-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between">
-          <div class="flex space-x-4 px-2">
-            <div class="flex items-center space-x-1">
-              <a href="/src/index.html" class="py-5 px-3 hover:text-gray-100"
-                >Home</a
-              >
-              <a href="/src/blogs.html" class="py-5 px-3 hover:text-gray-100"
-                >Blog</a
-              >
-              <a href="/src/contact.html" class="py-5 px-3 hover:text-gray-100"
-                >Contact</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+
+    <my-navbar></my-navbar>
+
     <header
       class="h-[400px] w-full flex flex-col justify-center items-center text-primary gap-4 bg-hero-pattern bg-center bg-cover bg-no-repeat"
     >
@@ -96,28 +86,12 @@
       >
         Blogs
       </div>
+
       <section
         id="blog-container"
         class="flex flex-col items-center justify-center gap-6 w-full text-white"
       >
-        <div class="flex flex-col md:flex-row gap-6 w-full">
-          <img
-            src="https://fastly.picsum.photos/id/485/300/200.jpg?hmac=N6yRTUogA1s8HlQMCO9BtxlXa8mg7AOQs6JKw0jq6Fw"
-            alt="feature image 1"
-            class="w-full md:w-auto"
-          />
-          <div class="flex flex-col gap-4 bg-wd-darkgrey p-6 grow">
-            <h3 class="text-2xl font-semibold">
-              Forward Integration Executive
-            </h3>
-            <p class="text-xl font-light">
-              Nobis quo est corporis totam dolores. Rerum quam autem debitis
-              dolores sunt et quis occaecati. Nam dolorem dolores.
-            </p>
-            <p>At 4/1/2024</p>
-            <a href="blogs/test.html">Read more</a>
-          </div>
-        </div>
+        
       </section>
       <div class="mt-8 text-center">
         <a class="text-white text-2xl" href="blogs.html"> See All Blog </a>
@@ -232,54 +206,9 @@
       </section>
     </main>
 
-    <footer class="flex flex-col text-white justify-center w-full px-8">
-      <section class="flex justify-between">
-        <div class="flex flex-col gap-6 w-2/6">
-          <h3 class="font-bold text-[32px]">Jane Doe</h3>
-          <p>
-            Hello, beautiful passerby. I’m Jane Doe. A passionate photographer.
-            I love to bla bla bla.... bla bla bla.... bla bla bla.... bla bla
-            bla.... bla bla bla.... bla bla bla.... bla bla bla.... I’m
-            available for hiring.
-          </p>
-          <form onsubmit="onSubmit(event)" class="flex flex-col gap-4">
-            <input
-              type="email"
-              name="myEmail"
-              placeholder="Enter your email"
-              class="py-[14px] pl-4 w-full text-wd-black"
-            />
-            <button
-              type="submit"
-              class="bg-primary text-[#010101] px-[33px] py-3 w-1/2"
-            >
-              Subscribe <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-        </div>
-        <div class="flex flex-col gap-6 w-2/6">
-          <h3 class="font-bold text-[32px]">Get in touch!</h3>
-          <p>
-            MBK Tower 20th Floor, 444, Phaya Thai Rd, Wang Mai, Pathum Wan,
-            Bangkok 10330
-          </p>
-          <p>Email: tanapol@skooldio.com</p>
-          <div class="flex gap-4">
-            <i class="fa-brands fa-facebook fa-2xl text-wd-brand"></i>
-            <i class="fa-brands fa-instagram fa-2xl text-wd-brand"></i>
-            <i class="fa-brands fa-x-twitter fa-2xl text-wd-brand"></i>
-          </div>
-        </div>
-      </section>
+    <my-footer></my-footer>
 
-      <section>
-        <p
-          class="text-center font-bold border-t-[1px] border-primary py-12 mt-12"
-        >
-          © 2023, Jane Doe. All Rights Reserved.
-        </p>
-      </section>
-    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script>
       function onSubmit(e) {
@@ -324,7 +253,7 @@
       }
     </script>
     <!-- 1. ส่วนที่เพิ่มมาสำหรับการดึง Blog -->
-    <script src="../scripts/blog-utils.js"></script>
+    <script src="../scripts/blogs-utils.js"></script>
     <!-- 1. จบส่วนที่เพิ่มมา -->
   </body>
 </html>
